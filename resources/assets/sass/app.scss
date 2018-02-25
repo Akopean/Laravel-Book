@@ -1,7 +1,7 @@
 
 // Fonts
 //@import url("https://fonts.googleapis.com/css?family=Raleway:300,400,600");
-@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
+//@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,600,400italic,600italic|Roboto+Slab:400,700");
 
 // Variables
 @import "variables";
@@ -2731,6 +2731,7 @@ ul.contact li a {
 }
 
 ul.actions {
+  margin-top: 10px;
   cursor: default;
   list-style: none;
   padding-left: 0;
@@ -3335,7 +3336,7 @@ button:disabled,
 }
 
 .posts article .image {
-  display: block;
+ // display: block;
   margin: 0 0 2em 0;
 }
 
@@ -4161,4 +4162,31 @@ dl, ol, ul {
 
 .breadcrumb-item+.breadcrumb-item:hover::before {
   text-decoration: none;
+}
+
+.posted-on {
+  font-size: 13px;
+  margin: 0 0 .5em 0;
+}
+
+.posts article h3, .posts article h2 {
+  margin: 0 0 .5em 0;
+}
+
+.category-links {
+  font-size: 16px;
+  display: inline-block;
+  margin-bottom: 10px;
+  a {
+     padding-right: 5px;
+     border-bottom: none;
+   }
+}
+
+.posts .category-links {
+  font-size: 12px;
+}
+
+.posts article > p {
+  margin-bottom: 5px;
 }

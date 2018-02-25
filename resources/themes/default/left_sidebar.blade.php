@@ -15,16 +15,11 @@
             </header>
             {{ menu('category_left', 'theme::partials.left_menu') }}
         </nav>
-
         <!-- Section -->
-        {{ Widget::run('recentNews') }}
+            @WidgetGroup('leftSidebar', ['int'=>5])
         <!-- Section -->
-        {{ Widget::run('contactInfo') }}
-        <!-- Section -->
-        <!-- Footer -->
         <footer id="footer">
-            {{ Widget::run('footerInfo') }}
+            @WidgetGroup('footer', ['int'=>5])
         </footer>
-
     </div>
 </div>

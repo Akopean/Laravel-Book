@@ -26,6 +26,11 @@
                         </a>
                         <h3>{{ $book->title }}</h3>
                         <p>{!! $book->excerpt !!}</p>
+                        <span class="category-links">
+                            @foreach($book->tags as $tag)
+                                <a href="{{ route('tag', $tag->slug) }}">{{ $tag->name }}@if(!$loop->last),@endif </a>
+                            @endforeach
+                        </span>
                         <ul class="actions">
                             <li><a href="{{ route('book', $book->slug) }}" class="button">More</a></li>
                         </ul>
@@ -33,6 +38,8 @@
                 @endforeach
             @endisset
         </div>
-        {{ $books->links('theme::partials.pagination') }}
+        @if ($books->hasPages())
+            {{ $books->links('theme::partials.pagination') }}
+        @endif
     </section>
 @endsection

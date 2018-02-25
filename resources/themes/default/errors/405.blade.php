@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>404 Page Not Found Error</title>
+    <title>405 Page Not Found Error</title>
     <style>
         html, body {
             background-color: #fff;
@@ -40,8 +40,9 @@
 <div class="flex-center position-ref full-height">
     <div class="content">
         <div class="title">
-            Sorry, the page you are looking for could not be found.                </div>
+            Sorry, the page you are looking for could not be found.</div>
     </div>
 </div>
 </body>
 </html>
+

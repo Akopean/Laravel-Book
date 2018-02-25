@@ -185,6 +185,7 @@ return [
         Collective\Html\HtmlServiceProvider::class,
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
         Arrilot\Widgets\ServiceProvider::class,
+
         /*
          * Application Service Providers...
          */
@@ -193,7 +194,7 @@ return [
         // App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
-
+        App\Providers\WidgetGroupProvider::class,
 
 
         App\Providers\ComposerServiceProvider::class,

@@ -35,6 +35,8 @@
                 @endforeach
             @endisset
         </div>
-        {{ $books->links('theme::partials.pagination') }}
+        @if ($books->hasPages())
+            {{ $books->links('theme::partials.pagination') }}
+        @endif
     </section>
 @endsection

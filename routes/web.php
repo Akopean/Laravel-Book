@@ -18,8 +18,14 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
+    Route::get('widget',['uses'=>'Admin\WidgetController@index'])->name('admin.widget');
     Voyager::routes();
+
 });
+
+Route::get('404',['as'=>'404','uses'=>'ErrorHandlerController@errorCode404']);
+
+Route::get('405',['as'=>'405','uses'=>'ErrorHandlerController@errorCode405']);
 
 
 
@@ -34,6 +40,7 @@ Route::get('/tag/{slug}', 'TagController@index')->name('tag');
 
 //Show Book/{slug} Page
 Route::get('/book/{slug}', 'BookController@index')->name('book');
+
 
 //Show Search Page
 Route::get('/search', 'SearchController@index')->name('search');
