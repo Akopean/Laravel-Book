@@ -19,6 +19,11 @@ Auth::routes();
 
 Route::group(['prefix' => 'admin'], function () {
     Route::get('widget',['uses'=>'Admin\WidgetController@index'])->name('admin.widget');
+    Route::post('widget',['uses'=>'Admin\WidgetController@update'])->name('admin.widget');
+  //  Route::put('widget',['uses'=>'Admin\WidgetController@store'])->name('admin.widget');
+    Route::post('widget/create',['uses'=>'Admin\WidgetController@create'])->name('admin.widget.create');
+    Route::post('widget/sort',['uses'=>'Admin\WidgetController@sort'])->name('admin.widget.sort');
+    Route::post('widget/drag',['uses'=>'Admin\WidgetController@drag'])->name('admin.widget.drag');
     Voyager::routes();
 
 });

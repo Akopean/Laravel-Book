@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use App\Widgets\Core\WidgetFieldInterface;
 
 class WidgetService {
 
@@ -10,11 +9,25 @@ class WidgetService {
     protected $widget;
     protected $errors;
 
+    public function getField()
+    {
+        return $this->widget->getField();
+    }
+
+    public function hasErrors()
+    {
+        return (count($this->errors) > 0) ? true : false;
+    }
+
+    public function getErrors()
+    {
+        return $this->errors;
+    }
     /**
      * WidgetService constructor.
      * @param $dir
      */
-    public function __construct($dir)
+ /*   public function __construct($dir)
     {
         $this->config = config('widgets')['widgets'];
         if (array_key_exists($dir, $this->config) &&
@@ -32,19 +45,10 @@ class WidgetService {
             $this->errors[] = ['error'=>'Widget Not Found'];
         }
     }
+*/
 
-    public function getField()
+    public function __construct($dir)
     {
-        return $this->widget->getField();
-    }
 
-    public function hasErrors()
-    {
-        return (count($this->errors) > 0) ? true : false;
-    }
-
-    public function getErrors()
-    {
-        return $this->errors;
     }
 }

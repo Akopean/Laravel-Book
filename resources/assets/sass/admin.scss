@@ -6,7 +6,9 @@
     background: #ececec;
     color: #23282d;
 }
-
+.widget-list #left #widget, .widget-inner #widget {
+    margin-bottom: 20px;
+}
 .widget-title h3, .widget-title h4 {
     margin: 0;
     padding: 15px;
@@ -47,11 +49,18 @@
     min-width: 100%;
         border: dashed 1px;
 }
-
+.widget-inner .dropdown-menu {
+    margin-top: 0;
+    border: none;
+}
 .widget-inner > .open > .dropdown-menu {
     position: inherit;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     float: none;
+}
+
+.mce-container iframe{
+    height: 220px !important;
 }
